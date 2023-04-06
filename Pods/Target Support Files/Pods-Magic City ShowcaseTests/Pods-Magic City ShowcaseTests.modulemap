@@ -1,0 +1,6 @@
+framework module Pods_Magic_City_ShowcaseTests {
+  umbrella header "Pods-Magic City ShowcaseTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5383BF309105EB1C663BDBF3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2113DA7269868CE9E2C019D3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework */; };
+		707C32D17C65FAA95759883C /* Pods_Magic_City_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4A656FE4C9F32382EDE3F9 /* Pods_Magic_City_Showcase.framework */; };
+		7C9B97E17E6A3373B2DCAF13 /* Pods_Magic_City_ShowcaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7331057746F2D19C333649F1 /* Pods_Magic_City_ShowcaseTests.framework */; };
+		AC07E00429D2161000AC9537 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00329D2161000AC9537 /* StationViewController.swift */; };
+		AC07E00829D21A6900AC9537 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00629D21A6900AC9537 /* PlayerCell.swift */; };
+		AC07E00929D21A6900AC9537 /* PlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC07E00729D21A6900AC9537 /* PlayerCell.xib */; };
+		AC07E00B29D22BD500AC9537 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00A29D22BD500AC9537 /* PlayerViewController.swift */; };
+		AC07E00D29D22CE200AC9537 /* PlayerListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00C29D22CE200AC9537 /* PlayerListing.swift */; };
+		AC2C644B29CE73BF0060D418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644A29CE73BF0060D418 /* AppDelegate.swift */; };
+		AC2C644D29CE73BF0060D418 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */; };
+		AC2C644F29CE73BF0060D418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644E29CE73BF0060D418 /* ViewController.swift */; };
+		AC2C645229CE73BF0060D418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645029CE73BF0060D418 /* Main.storyboard */; };
+		AC2C645429CE73C00060D418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645329CE73C00060D418 /* Assets.xcassets */; };
+		AC2C645729CE73C00060D418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */; };
+		AC2C646229CE73C00060D418 /* Magic_City_ShowcaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C646129CE73C00060D418 /* Magic_City_ShowcaseTests.swift */; };
+		AC2C646C29CE73C00060D418 /* Magic_City_ShowcaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C646B29CE73C00060D418 /* Magic_City_ShowcaseUITests.swift */; };
+		AC2C646E29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C646D29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift */; };
+		AC2C647B29CE79F00060D418 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC2C647A29CE79F00060D418 /* GoogleService-Info.plist */; };
+		AC2C647D29CE99BE0060D418 /* TestVideoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C647C29CE99BE0060D418 /* TestVideoController.swift */; };
+		AC2C648B29CF3E920060D418 /* My Movie BQ.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC2C648A29CF3E920060D418 /* My Movie BQ.mp4 */; };
+		AC2C648D29CF58AA0060D418 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C648C29CF58AA0060D418 /* Constants.swift */; };
+		AC2C649129CF60800060D418 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C649029CF60800060D418 /* ChooseViewController.swift */; };
+		AC3749BB29D37BDE0018B7C0 /* PlayerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */; };
+		AC51E96329D637E40046F6B9 /* PlayerProfileLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */; };
+		AC51E96529D9F9B60046F6B9 /* private-key.json in Resources */ = {isa = PBXBuildFile; fileRef = AC51E96429D9F9B50046F6B9 /* private-key.json */; };
+		AC8E27A929CF87DD00C2F326 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */; };
+		AC8E27AB29CF88B000C2F326 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */; };
+		ACABF0D629D0BB20009F3049 /* Football Match Instagram Story.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC2C645E29CE73C00060D418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C643F29CE73BF0060D418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C644629CE73BF0060D418;
+			remoteInfo = "Magic City Showcase";
+		};
+		AC2C646829CE73C00060D418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC2C643F29CE73BF0060D418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC2C644629CE73BF0060D418;
+			remoteInfo = "Magic City Showcase";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14DBFE9C6E50150225940E49 /* Pods-Magic City ShowcaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City ShowcaseTests.release.xcconfig"; path = "Target Support Files/Pods-Magic City ShowcaseTests/Pods-Magic City ShowcaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		1EFD2B47854407A23D79E4FB /* Pods-Magic City ShowcaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City ShowcaseTests.debug.xcconfig"; path = "Target Support Files/Pods-Magic City ShowcaseTests/Pods-Magic City ShowcaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2113DA7269868CE9E2C019D3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7331057746F2D19C333649F1 /* Pods_Magic_City_ShowcaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_City_ShowcaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80765E460587B95807A0198F /* Pods-Magic City Showcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City Showcase.release.xcconfig"; path = "Target Support Files/Pods-Magic City Showcase/Pods-Magic City Showcase.release.xcconfig"; sourceTree = "<group>"; };
+		8AA73DE51AF50D524B50822C /* Pods-Magic City Showcase-Magic City ShowcaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City Showcase-Magic City ShowcaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-Magic City Showcase-Magic City ShowcaseUITests/Pods-Magic City Showcase-Magic City ShowcaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C4A656FE4C9F32382EDE3F9 /* Pods_Magic_City_Showcase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magic_City_Showcase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A91C5DEB8A3534FBE5FC231A /* Pods-Magic City Showcase-Magic City ShowcaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City Showcase-Magic City ShowcaseUITests.release.xcconfig"; path = "Target Support Files/Pods-Magic City Showcase-Magic City ShowcaseUITests/Pods-Magic City Showcase-Magic City ShowcaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC07E00329D2161000AC9537 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		AC07E00629D21A6900AC9537 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		AC07E00729D21A6900AC9537 /* PlayerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerCell.xib; sourceTree = "<group>"; };
+		AC07E00A29D22BD500AC9537 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		AC07E00C29D22CE200AC9537 /* PlayerListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListing.swift; sourceTree = "<group>"; };
+		AC2C644729CE73BF0060D418 /* Magic City Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic City Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C644A29CE73BF0060D418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AC2C644E29CE73BF0060D418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC2C645129CE73BF0060D418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC2C645329CE73C00060D418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC2C645629CE73C00060D418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC2C645829CE73C00060D418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC2C645D29CE73C00060D418 /* Magic City ShowcaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic City ShowcaseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C646129CE73C00060D418 /* Magic_City_ShowcaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_City_ShowcaseTests.swift; sourceTree = "<group>"; };
+		AC2C646729CE73C00060D418 /* Magic City ShowcaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Magic City ShowcaseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC2C646B29CE73C00060D418 /* Magic_City_ShowcaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_City_ShowcaseUITests.swift; sourceTree = "<group>"; };
+		AC2C646D29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic_City_ShowcaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC2C647A29CE79F00060D418 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AC2C647C29CE99BE0060D418 /* TestVideoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVideoController.swift; sourceTree = "<group>"; };
+		AC2C648A29CF3E920060D418 /* My Movie BQ.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "My Movie BQ.mp4"; sourceTree = "<group>"; };
+		AC2C648C29CF58AA0060D418 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC2C649029CF60800060D418 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
+		AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileController.swift; sourceTree = "<group>"; };
+		AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileLoaded.swift; sourceTree = "<group>"; };
+		AC51E96429D9F9B50046F6B9 /* private-key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "private-key.json"; sourceTree = "<group>"; };
+		AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Football Match Instagram Story.mp4"; sourceTree = "<group>"; };
+		CA7DC73525EED957FD53133C /* Pods-Magic City Showcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magic City Showcase.debug.xcconfig"; path = "Target Support Files/Pods-Magic City Showcase/Pods-Magic City Showcase.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC2C644429CE73BF0060D418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707C32D17C65FAA95759883C /* Pods_Magic_City_Showcase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C645A29CE73C00060D418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C9B97E17E6A3373B2DCAF13 /* Pods_Magic_City_ShowcaseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C646429CE73C00060D418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5383BF309105EB1C663BDBF3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7DF49A0A5015ACEDBD43FB71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA7DC73525EED957FD53133C /* Pods-Magic City Showcase.debug.xcconfig */,
+				80765E460587B95807A0198F /* Pods-Magic City Showcase.release.xcconfig */,
+				8AA73DE51AF50D524B50822C /* Pods-Magic City Showcase-Magic City ShowcaseUITests.debug.xcconfig */,
+				A91C5DEB8A3534FBE5FC231A /* Pods-Magic City Showcase-Magic City ShowcaseUITests.release.xcconfig */,
+				1EFD2B47854407A23D79E4FB /* Pods-Magic City ShowcaseTests.debug.xcconfig */,
+				14DBFE9C6E50150225940E49 /* Pods-Magic City ShowcaseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8BC441C10DE2F6ED22E4E28A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C4A656FE4C9F32382EDE3F9 /* Pods_Magic_City_Showcase.framework */,
+				2113DA7269868CE9E2C019D3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework */,
+				7331057746F2D19C333649F1 /* Pods_Magic_City_ShowcaseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC07E00529D21A0A00AC9537 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC07E00629D21A6900AC9537 /* PlayerCell.swift */,
+				AC07E00729D21A6900AC9537 /* PlayerCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC2C643E29CE73BF0060D418 = {
+			isa = PBXGroup;
+			children = (
+				AC51E96429D9F9B50046F6B9 /* private-key.json */,
+				ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */,
+				AC2C648A29CF3E920060D418 /* My Movie BQ.mp4 */,
+				AC07E00529D21A0A00AC9537 /* View */,
+				AC2C644929CE73BF0060D418 /* Magic City Showcase */,
+				AC2C646029CE73C00060D418 /* Magic City ShowcaseTests */,
+				AC2C646A29CE73C00060D418 /* Magic City ShowcaseUITests */,
+				AC2C644829CE73BF0060D418 /* Products */,
+				7DF49A0A5015ACEDBD43FB71 /* Pods */,
+				8BC441C10DE2F6ED22E4E28A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC2C644829CE73BF0060D418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C644729CE73BF0060D418 /* Magic City Showcase.app */,
+				AC2C645D29CE73C00060D418 /* Magic City ShowcaseTests.xctest */,
+				AC2C646729CE73C00060D418 /* Magic City ShowcaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC2C644929CE73BF0060D418 /* Magic City Showcase */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C644A29CE73BF0060D418 /* AppDelegate.swift */,
+				AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */,
+				AC2C644E29CE73BF0060D418 /* ViewController.swift */,
+				AC2C647C29CE99BE0060D418 /* TestVideoController.swift */,
+				AC2C649029CF60800060D418 /* ChooseViewController.swift */,
+				AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */,
+				AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */,
+				AC07E00329D2161000AC9537 /* StationViewController.swift */,
+				AC07E00A29D22BD500AC9537 /* PlayerViewController.swift */,
+				AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */,
+				AC2C645029CE73BF0060D418 /* Main.storyboard */,
+				AC2C645329CE73C00060D418 /* Assets.xcassets */,
+				AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */,
+				AC2C645829CE73C00060D418 /* Info.plist */,
+				AC2C647A29CE79F00060D418 /* GoogleService-Info.plist */,
+				AC2C648C29CF58AA0060D418 /* Constants.swift */,
+				AC07E00C29D22CE200AC9537 /* PlayerListing.swift */,
+				AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */,
+			);
+			path = "Magic City Showcase";
+			sourceTree = "<group>";
+		};
+		AC2C646029CE73C00060D418 /* Magic City ShowcaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C646129CE73C00060D418 /* Magic_City_ShowcaseTests.swift */,
+			);
+			path = "Magic City ShowcaseTests";
+			sourceTree = "<group>";
+		};
+		AC2C646A29CE73C00060D418 /* Magic City ShowcaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C646B29CE73C00060D418 /* Magic_City_ShowcaseUITests.swift */,
+				AC2C646D29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift */,
+			);
+			path = "Magic City ShowcaseUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC2C644629CE73BF0060D418 /* Magic City Showcase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C647129CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City Showcase" */;
+			buildPhases = (
+				27ADB017ED921F6E3E947ABA /* [CP] Check Pods Manifest.lock */,
+				AC2C644329CE73BF0060D418 /* Sources */,
+				AC2C644429CE73BF0060D418 /* Frameworks */,
+				AC2C644529CE73BF0060D418 /* Resources */,
+				9DE3A09FA6090D789F3195CB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Magic City Showcase";
+			productName = "Magic City Showcase";
+			productReference = AC2C644729CE73BF0060D418 /* Magic City Showcase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC2C645C29CE73C00060D418 /* Magic City ShowcaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C647429CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City ShowcaseTests" */;
+			buildPhases = (
+				3BDA5D1136C0EFFCFBFBC172 /* [CP] Check Pods Manifest.lock */,
+				AC2C645929CE73C00060D418 /* Sources */,
+				AC2C645A29CE73C00060D418 /* Frameworks */,
+				AC2C645B29CE73C00060D418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C645F29CE73C00060D418 /* PBXTargetDependency */,
+			);
+			name = "Magic City ShowcaseTests";
+			productName = "Magic City ShowcaseTests";
+			productReference = AC2C645D29CE73C00060D418 /* Magic City ShowcaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC2C646629CE73C00060D418 /* Magic City ShowcaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC2C647729CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City ShowcaseUITests" */;
+			buildPhases = (
+				A7D13854A6C1F5B4EB2173E5 /* [CP] Check Pods Manifest.lock */,
+				AC2C646329CE73C00060D418 /* Sources */,
+				AC2C646429CE73C00060D418 /* Frameworks */,
+				AC2C646529CE73C00060D418 /* Resources */,
+				8CFFB6806DDB2798232662B3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC2C646929CE73C00060D418 /* PBXTargetDependency */,
+			);
+			name = "Magic City ShowcaseUITests";
+			productName = "Magic City ShowcaseUITests";
+			productReference = AC2C646729CE73C00060D418 /* Magic City ShowcaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC2C643F29CE73BF0060D418 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AC2C644629CE73BF0060D418 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					AC2C645C29CE73C00060D418 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AC2C644629CE73BF0060D418;
+					};
+					AC2C646629CE73C00060D418 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = AC2C644629CE73BF0060D418;
+					};
+				};
+			};
+			buildConfigurationList = AC2C644229CE73BF0060D418 /* Build configuration list for PBXProject "Magic City Showcase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC2C643E29CE73BF0060D418;
+			productRefGroup = AC2C644829CE73BF0060D418 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC2C644629CE73BF0060D418 /* Magic City Showcase */,
+				AC2C645C29CE73C00060D418 /* Magic City ShowcaseTests */,
+				AC2C646629CE73C00060D418 /* Magic City ShowcaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC2C644529CE73BF0060D418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC51E96529D9F9B60046F6B9 /* private-key.json in Resources */,
+				ACABF0D629D0BB20009F3049 /* Football Match Instagram Story.mp4 in Resources */,
+				AC2C648B29CF3E920060D418 /* My Movie BQ.mp4 in Resources */,
+				AC2C645729CE73C00060D418 /* LaunchScreen.storyboard in Resources */,
+				AC07E00929D21A6900AC9537 /* PlayerCell.xib in Resources */,
+				AC2C647B29CE79F00060D418 /* GoogleService-Info.plist in Resources */,
+				AC2C645429CE73C00060D418 /* Assets.xcassets in Resources */,
+				AC2C645229CE73BF0060D418 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C645B29CE73C00060D418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C646529CE73C00060D418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27ADB017ED921F6E3E947ABA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magic City Showcase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BDA5D1136C0EFFCFBFBC172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magic City ShowcaseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CFFB6806DDB2798232662B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase-Magic City ShowcaseUITests/Pods-Magic City Showcase-Magic City ShowcaseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase-Magic City ShowcaseUITests/Pods-Magic City Showcase-Magic City ShowcaseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase-Magic City ShowcaseUITests/Pods-Magic City Showcase-Magic City ShowcaseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DE3A09FA6090D789F3195CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase/Pods-Magic City Showcase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase/Pods-Magic City Showcase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Magic City Showcase/Pods-Magic City Showcase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7D13854A6C1F5B4EB2173E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magic City Showcase-Magic City ShowcaseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC2C644329CE73BF0060D418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC07E00429D2161000AC9537 /* StationViewController.swift in Sources */,
+				AC07E00D29D22CE200AC9537 /* PlayerListing.swift in Sources */,
+				AC2C648D29CF58AA0060D418 /* Constants.swift in Sources */,
+				AC2C644F29CE73BF0060D418 /* ViewController.swift in Sources */,
+				AC8E27A929CF87DD00C2F326 /* RegisterViewController.swift in Sources */,
+				AC07E00829D21A6900AC9537 /* PlayerCell.swift in Sources */,
+				AC2C644B29CE73BF0060D418 /* AppDelegate.swift in Sources */,
+				AC8E27AB29CF88B000C2F326 /* LoginViewController.swift in Sources */,
+				AC2C644D29CE73BF0060D418 /* SceneDelegate.swift in Sources */,
+				AC2C647D29CE99BE0060D418 /* TestVideoController.swift in Sources */,
+				AC07E00B29D22BD500AC9537 /* PlayerViewController.swift in Sources */,
+				AC51E96329D637E40046F6B9 /* PlayerProfileLoaded.swift in Sources */,
+				AC2C649129CF60800060D418 /* ChooseViewController.swift in Sources */,
+				AC3749BB29D37BDE0018B7C0 /* PlayerProfileController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C645929CE73C00060D418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C646229CE73C00060D418 /* Magic_City_ShowcaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC2C646329CE73C00060D418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC2C646E29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift in Sources */,
+				AC2C646C29CE73C00060D418 /* Magic_City_ShowcaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC2C645F29CE73C00060D418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C644629CE73BF0060D418 /* Magic City Showcase */;
+			targetProxy = AC2C645E29CE73C00060D418 /* PBXContainerItemProxy */;
+		};
+		AC2C646929CE73C00060D418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC2C644629CE73BF0060D418 /* Magic City Showcase */;
+			targetProxy = AC2C646829CE73C00060D418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC2C645029CE73BF0060D418 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C645129CE73BF0060D418 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC2C645629CE73C00060D418 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC2C646F29CE73C00060D418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC2C647029CE73C00060D418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC2C647229CE73C00060D418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA7DC73525EED957FD53133C /* Pods-Magic City Showcase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Magic City Showcase/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-Showcase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC2C647329CE73C00060D418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80765E460587B95807A0198F /* Pods-Magic City Showcase.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Magic City Showcase/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-Showcase";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC2C647529CE73C00060D418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EFD2B47854407A23D79E4FB /* Pods-Magic City ShowcaseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-ShowcaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic City Showcase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Magic City Showcase";
+			};
+			name = Debug;
+		};
+		AC2C647629CE73C00060D418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DBFE9C6E50150225940E49 /* Pods-Magic City ShowcaseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-ShowcaseTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic City Showcase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Magic City Showcase";
+			};
+			name = Release;
+		};
+		AC2C647829CE73C00060D418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA73DE51AF50D524B50822C /* Pods-Magic City Showcase-Magic City ShowcaseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-ShowcaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Magic City Showcase";
+			};
+			name = Debug;
+		};
+		AC2C647929CE73C00060D418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91C5DEB8A3534FBE5FC231A /* Pods-Magic City Showcase-Magic City ShowcaseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-ShowcaseUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Magic City Showcase";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC2C644229CE73BF0060D418 /* Build configuration list for PBXProject "Magic City Showcase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C646F29CE73C00060D418 /* Debug */,
+				AC2C647029CE73C00060D418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C647129CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City Showcase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C647229CE73C00060D418 /* Debug */,
+				AC2C647329CE73C00060D418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C647429CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City ShowcaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C647529CE73C00060D418 /* Debug */,
+				AC2C647629CE73C00060D418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC2C647729CE73C00060D418 /* Build configuration list for PBXNativeTarget "Magic City ShowcaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC2C647829CE73C00060D418 /* Debug */,
+				AC2C647929CE73C00060D418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC2C643F29CE73BF0060D418 /* Project object */;
+}
