@@ -28,8 +28,13 @@ class StationViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: K.stationSegue, sender: sender)
+        sender.backgroundColor = UIColor(white: 1, alpha: 0.4)
         
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            sender.backgroundColor = UIColor.clear
+            self.performSegue(withIdentifier: K.stationSegue, sender: sender)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
