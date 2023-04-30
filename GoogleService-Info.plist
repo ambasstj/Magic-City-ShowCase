@@ -7,7 +7,7 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.1021731588860-v9oet74ote31ndsllkcbara4mbfr62b1</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCNFeb5SmDDrX3BoD2FPwxThVoC4QHM9tA</string>
+	<string>AIzaSyANRdHuTGCusa1TN4tGNDKiJOGariehOMM</string>
 	<key>GCM_SENDER_ID</key>
 	<string>1021731588860</string>
 	<key>PLIST_VERSION</key>
@@ -19,15 +19,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>the-magic-city-showcase.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:1021731588860:ios:de263d678269bb6fb92579</string>
 </dict>

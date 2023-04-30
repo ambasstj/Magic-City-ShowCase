@@ -38,7 +38,6 @@ class StationViewController: UIViewController {
             let destinationVC = segue.destination as! PlayerViewController
             if let senderButton = sender as? UIButton {
                 destinationVC.navigationItem.title = senderButton.titleLabel?.text
-                print(senderButton.titleLabel?.text ?? "no titleLabel.text found")
                    }
         }
     

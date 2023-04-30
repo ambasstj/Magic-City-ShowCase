@@ -59,7 +59,9 @@ class PlayerProfileLoaded: UIViewController{
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
         
         nameLabel.text = playerArray?[indexPath ?? 0].name
         heightLabel.text = playerArray?[indexPath ?? 0].height

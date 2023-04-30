@@ -11,7 +11,6 @@ import UIKit
 
 class TestVideoController: UIViewController {
     
-    @IBOutlet weak var yearLabel: UILabel!
     
     @IBOutlet weak var registerButtonOutlet: UIButton!
     
@@ -19,6 +18,7 @@ class TestVideoController: UIViewController {
         
     @IBOutlet weak var videoView: UIView!
     
+    @IBOutlet weak var skipSignIn: UIButton!
     
     @IBOutlet weak var logoView: UIImageView!
     
@@ -42,7 +42,7 @@ class TestVideoController: UIViewController {
         videoView.addSubview(loginButtonOutlet)
         videoView.addSubview(registerButtonOutlet)
         videoView.addSubview(logoView)
-        //videoView.addSubview(yearLabel)
+        videoView.addSubview(skipSignIn)
         player.play()
        
     }
@@ -56,8 +56,28 @@ class TestVideoController: UIViewController {
         
     }
     
+    @IBAction func skipSignIn(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "skipSignIn", sender: self)
+        
+    }
     
-    
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "skipSignIn" {
+            if let destinationVC = segue.destination as? PlayerProfileController {
+                destinationVC.loadViewIfNeeded() // to make sure the view is loaded
+                destinationVC.addAthleteButton.isHidden = true
+                destinationVC.shouldHideButton = true
+            }
+        } else {
+            print("Why lord, why lord do I gotta suffer?")
+        }
+        
+        
+    }
 }
+    
+    
+    
+    
+

@@ -22,6 +22,8 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
+        
         emailTextfield.layer.cornerRadius = 8
         
         
@@ -30,10 +32,8 @@ class LoginViewController: UIViewController {
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
             
             passwordTextfield.attributedPlaceholder = NSAttributedString(string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
-        
-        
-       
     }
+    
     let errorAtSignIn = UIAlertController(title: "Error", message: "Please enter a valid username and password", preferredStyle: .alert)
     
   

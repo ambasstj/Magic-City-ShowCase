@@ -18,11 +18,13 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var searchBar: UITextField!
     
     
+    @IBOutlet weak var searchButton: UIButton!
     
     @IBOutlet weak var messageTextfield: UITextField!
     
     
     // db is the reference to Firebase's database  that we imported using FirebaseFirestore
+    
     let db = Firestore.firestore()
     
     var players: [PlayerListing] = []
@@ -43,6 +45,7 @@ class PlayerViewController: UIViewController {
         //custom design files must be registered inside the view controller that will use them
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
+        searchButton.setTitle("", for: .normal)
         
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
@@ -52,16 +55,14 @@ class PlayerViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = newBackButton
     
 
-   
-
         
-        loadMessages()
+        loadPlayers()
         
     }
     
     
     
-    func loadMessages () {
+    func loadPlayers () {
         
         
         db.collection(K.FStore.collectionName)
@@ -74,8 +75,10 @@ class PlayerViewController: UIViewController {
                 if let e = error {
                     print("There was an error retreiving this data from Database: \(e)")
                 }
+                
                 else {
                     //querySnapshot is a class inside of Firestore that stores all relevant data. documents is one property of QS and has a method called data that returns a Dictionary
+                    
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             
@@ -100,26 +103,29 @@ class PlayerViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     
                                     self.tableView.reloadData()
+                                    
+                                    
                                     //This section is responsible for scrolling to a specified part of the table view.
                                     
 //                                    let indexPath = IndexPath(row: self.players.startIndex, section: 0)
 //
 //                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                     
-                                   
                                 }
+                                
                             } else {
                                 
                                 print("How could this be true AAND the array is clearly being populated?")
                             }
-                            print(self.players.count)
+                        
                         }
-                        print(self.players.description)
+                       
                     }
                 }
             }
         
     }
+    
     
     @objc func back(sender: UIBarButtonItem) {
         
@@ -143,9 +149,7 @@ class PlayerViewController: UIViewController {
      }
         
     
-        
-    
-    
+
     
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
@@ -200,9 +204,6 @@ extension PlayerViewController: UITableViewDataSource {
         cell.playerSnapshot.image = UIImage(named: "MCS Logo no BG")
       
         
-        //This was a clever trick by ChatGPT that I will definitley reference in the future. It's a workaround the DequeueReusable cell mechanics that would otherwise change the color of every 4th cell (each new reusable cell that's out of view
-        
-        // if selectedIndice.contains((indexPath)) {
         
         documentRef.getDocument { (document, error) in
             if let document = document, document.exists {
@@ -313,7 +314,6 @@ extension PlayerViewController: UITableViewDelegate, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        print("this worked i guess")
         
         if let playerSearch = searchBar.text{
             

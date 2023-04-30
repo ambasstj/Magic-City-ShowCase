@@ -9,6 +9,7 @@ target 'Magic City Showcase' do
   pod 'FirebaseFirestore'
   pod 'FirebaseStorage'
   pod 'SDWebImage', '~> 5.0'
+  pod 'FirebaseCore'
   
 
   target 'Magic City ShowcaseTests' do

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5383BF309105EB1C663BDBF3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2113DA7269868CE9E2C019D3 /* Pods_Magic_City_Showcase_Magic_City_ShowcaseUITests.framework */; };
-		707C32D17C65FAA95759883C /* Pods_Magic_City_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4A656FE4C9F32382EDE3F9 /* Pods_Magic_City_Showcase.framework */; };
 		7C9B97E17E6A3373B2DCAF13 /* Pods_Magic_City_ShowcaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7331057746F2D19C333649F1 /* Pods_Magic_City_ShowcaseTests.framework */; };
 		AC07E00429D2161000AC9537 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00329D2161000AC9537 /* StationViewController.swift */; };
 		AC07E00829D21A6900AC9537 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00629D21A6900AC9537 /* PlayerCell.swift */; };
@@ -17,7 +16,6 @@
 		AC07E00D29D22CE200AC9537 /* PlayerListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC07E00C29D22CE200AC9537 /* PlayerListing.swift */; };
 		AC2C644B29CE73BF0060D418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644A29CE73BF0060D418 /* AppDelegate.swift */; };
 		AC2C644D29CE73BF0060D418 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */; };
-		AC2C644F29CE73BF0060D418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C644E29CE73BF0060D418 /* ViewController.swift */; };
 		AC2C645229CE73BF0060D418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645029CE73BF0060D418 /* Main.storyboard */; };
 		AC2C645429CE73C00060D418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645329CE73C00060D418 /* Assets.xcassets */; };
 		AC2C645729CE73C00060D418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */; };
@@ -31,10 +29,10 @@
 		AC2C649129CF60800060D418 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2C649029CF60800060D418 /* ChooseViewController.swift */; };
 		AC3749BB29D37BDE0018B7C0 /* PlayerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */; };
 		AC51E96329D637E40046F6B9 /* PlayerProfileLoaded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */; };
-		AC51E96529D9F9B60046F6B9 /* private-key.json in Resources */ = {isa = PBXBuildFile; fileRef = AC51E96429D9F9B50046F6B9 /* private-key.json */; };
 		AC8E27A929CF87DD00C2F326 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */; };
 		AC8E27AB29CF88B000C2F326 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */; };
 		ACABF0D629D0BB20009F3049 /* Football Match Instagram Story.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */; };
+		ACE0F30029FEEF3900C4C0EC /* Pods_Magic_City_Showcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4A656FE4C9F32382EDE3F9 /* Pods_Magic_City_Showcase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +69,6 @@
 		AC2C644729CE73BF0060D418 /* Magic City Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Magic City Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C644A29CE73BF0060D418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC2C644E29CE73BF0060D418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC2C645129CE73BF0060D418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC2C645329CE73C00060D418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2C645629CE73C00060D418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -88,7 +85,6 @@
 		AC2C649029CF60800060D418 /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileController.swift; sourceTree = "<group>"; };
 		AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfileLoaded.swift; sourceTree = "<group>"; };
-		AC51E96429D9F9B50046F6B9 /* private-key.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "private-key.json"; sourceTree = "<group>"; };
 		AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Football Match Instagram Story.mp4"; sourceTree = "<group>"; };
@@ -100,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707C32D17C65FAA95759883C /* Pods_Magic_City_Showcase.framework in Frameworks */,
+				ACE0F30029FEEF3900C4C0EC /* Pods_Magic_City_Showcase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,22 +142,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AC07E00529D21A0A00AC9537 /* View */ = {
+		AC07E00529D21A0A00AC9537 /* Xib File (for cells) */ = {
 			isa = PBXGroup;
 			children = (
 				AC07E00629D21A6900AC9537 /* PlayerCell.swift */,
 				AC07E00729D21A6900AC9537 /* PlayerCell.xib */,
 			);
-			path = View;
+			path = "Xib File (for cells)";
 			sourceTree = "<group>";
 		};
 		AC2C643E29CE73BF0060D418 = {
 			isa = PBXGroup;
 			children = (
-				AC51E96429D9F9B50046F6B9 /* private-key.json */,
 				ACABF0D529D0BB20009F3049 /* Football Match Instagram Story.mp4 */,
 				AC2C648A29CF3E920060D418 /* My Movie BQ.mp4 */,
-				AC07E00529D21A0A00AC9537 /* View */,
+				AC31690329FD9F1C008FE940 /* Assets */,
+				AC31690229FD9EF3008FE940 /* Model */,
+				AC31690129FD9E4B008FE940 /* View Controllers */,
+				AC07E00529D21A0A00AC9537 /* Xib File (for cells) */,
 				AC2C644929CE73BF0060D418 /* Magic City Showcase */,
 				AC2C646029CE73C00060D418 /* Magic City ShowcaseTests */,
 				AC2C646A29CE73C00060D418 /* Magic City ShowcaseUITests */,
@@ -186,22 +184,8 @@
 			children = (
 				AC2C644A29CE73BF0060D418 /* AppDelegate.swift */,
 				AC2C644C29CE73BF0060D418 /* SceneDelegate.swift */,
-				AC2C644E29CE73BF0060D418 /* ViewController.swift */,
-				AC2C647C29CE99BE0060D418 /* TestVideoController.swift */,
-				AC2C649029CF60800060D418 /* ChooseViewController.swift */,
-				AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */,
-				AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */,
-				AC07E00329D2161000AC9537 /* StationViewController.swift */,
-				AC07E00A29D22BD500AC9537 /* PlayerViewController.swift */,
-				AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */,
-				AC2C645029CE73BF0060D418 /* Main.storyboard */,
-				AC2C645329CE73C00060D418 /* Assets.xcassets */,
-				AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */,
 				AC2C645829CE73C00060D418 /* Info.plist */,
 				AC2C647A29CE79F00060D418 /* GoogleService-Info.plist */,
-				AC2C648C29CF58AA0060D418 /* Constants.swift */,
-				AC07E00C29D22CE200AC9537 /* PlayerListing.swift */,
-				AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */,
 			);
 			path = "Magic City Showcase";
 			sourceTree = "<group>";
@@ -221,6 +205,40 @@
 				AC2C646D29CE73C00060D418 /* Magic_City_ShowcaseUITestsLaunchTests.swift */,
 			);
 			path = "Magic City ShowcaseUITests";
+			sourceTree = "<group>";
+		};
+		AC31690129FD9E4B008FE940 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C645529CE73C00060D418 /* LaunchScreen.storyboard */,
+				AC2C645029CE73BF0060D418 /* Main.storyboard */,
+				AC2C647C29CE99BE0060D418 /* TestVideoController.swift */,
+				AC8E27AA29CF88B000C2F326 /* LoginViewController.swift */,
+				AC8E27A829CF87DD00C2F326 /* RegisterViewController.swift */,
+				AC2C649029CF60800060D418 /* ChooseViewController.swift */,
+				AC07E00329D2161000AC9537 /* StationViewController.swift */,
+				AC07E00A29D22BD500AC9537 /* PlayerViewController.swift */,
+				AC3749BA29D37BDE0018B7C0 /* PlayerProfileController.swift */,
+				AC51E96229D637E40046F6B9 /* PlayerProfileLoaded.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AC31690229FD9EF3008FE940 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C648C29CF58AA0060D418 /* Constants.swift */,
+				AC07E00C29D22CE200AC9537 /* PlayerListing.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC31690329FD9F1C008FE940 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AC2C645329CE73C00060D418 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,7 +350,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC51E96529D9F9B60046F6B9 /* private-key.json in Resources */,
 				ACABF0D629D0BB20009F3049 /* Football Match Instagram Story.mp4 in Resources */,
 				AC2C648B29CF3E920060D418 /* My Movie BQ.mp4 in Resources */,
 				AC2C645729CE73C00060D418 /* LaunchScreen.storyboard in Resources */,
@@ -470,7 +487,6 @@
 				AC07E00429D2161000AC9537 /* StationViewController.swift in Sources */,
 				AC07E00D29D22CE200AC9537 /* PlayerListing.swift in Sources */,
 				AC2C648D29CF58AA0060D418 /* Constants.swift in Sources */,
-				AC2C644F29CE73BF0060D418 /* ViewController.swift in Sources */,
 				AC8E27A929CF87DD00C2F326 /* RegisterViewController.swift in Sources */,
 				AC07E00829D21A6900AC9537 /* PlayerCell.swift in Sources */,
 				AC2C644B29CE73BF0060D418 /* AppDelegate.swift in Sources */,
@@ -568,6 +584,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Tevin Jones (L9X3649RTK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -586,13 +603,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
 			};
 			name = Debug;
 		};
@@ -628,10 +646,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Tevin Jones (L9X3649RTK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -640,9 +660,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -656,9 +677,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Magic City Showcase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -666,7 +689,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -674,6 +697,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-Showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -686,9 +710,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88XX9TGGJU;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Magic City Showcase/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -696,7 +722,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -704,6 +730,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Magic-City-Showcase.Magic-City-Showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

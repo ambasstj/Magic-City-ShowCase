@@ -22,6 +22,7 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
     
     @IBOutlet weak var searchBar: UITextField!
     
+    @IBOutlet weak var addAthleteButton: UIButton!
     
     
     // db is the reference to Firebase's database  that we imported using FirebaseFirestore
@@ -39,6 +40,9 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
     var players: [PlayerListing] = []
     //using this variable to pass the value of the selected index over to the playerprofileloded view controller so I can access the results of the selected player from the previous (this) screen
     var indexPH: IndexPath?
+    
+    var shouldHideButton = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -242,7 +246,7 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
         
         if let imageData = photo.jpegData(compressionQuality: 0.5){
             
-            let uploadData = headShotRef.putData(imageData) { metadata, error in
+            _ = headShotRef.putData(imageData) { metadata, error in
                 
                 if error == nil && metadata != nil{
                 
@@ -288,7 +292,7 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
                     self.players[indexPath.row].url = headShotURL
                    
                 } else if let error = error {
-       //             print("Error getting download URL: \(error.localizedDescription)")
+                   print("Error getting download URL: \(error.localizedDescription)")
                 }
             }
         }
@@ -308,6 +312,10 @@ extension PlayerProfileController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         //assigns the cell as the XIB File
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for:indexPath) as! PlayerCell
+        
+        if shouldHideButton {
+            cell.addPhoto.isHidden = true
+        }
         cell.addPhoto.setTitle("", for: .normal)
         cell.playername.text = players[indexPath.row].name
         cell.graduatingClass.text = "\(players[indexPath.row].graduatingClass ?? 0000)"
@@ -366,6 +374,7 @@ extension PlayerProfileController: UITableViewDataSource {
     }
             // prepares the destination VC with the neccesary information we need to populate the page, in this case, the index path, and a reference to the players array
             override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                
                 if segue.identifier == "ViewToProfilePage"{
                     
                     let destinationVC = segue.destination as! PlayerProfileLoaded
