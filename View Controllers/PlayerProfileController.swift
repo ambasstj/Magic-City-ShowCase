@@ -347,6 +347,7 @@ extension PlayerProfileController: UITableViewDataSource {
             )
         } else {
             cell.playerSnapshot.image = UIImage(named: "MCS Logo no BG")
+        
         }
         
         return cell
