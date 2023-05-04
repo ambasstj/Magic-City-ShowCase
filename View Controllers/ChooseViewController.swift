@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import AVKit
+import FirebaseAuth
 
 class ChooseViewController: UIViewController{
     
@@ -18,6 +19,7 @@ class ChooseViewController: UIViewController{
     @IBOutlet weak var eventButton: UIButton!
     
     
+    @IBOutlet weak var deleteUserAccount: UIButton!
     @IBOutlet weak var playerProfileButton: UIButton!
     
     
@@ -47,6 +49,7 @@ class ChooseViewController: UIViewController{
         videoView.layer.addSublayer(avPlayerLayer)
         videoView.addSubview(eventButton)
         videoView.addSubview(playerProfileButton)
+        videoView.addSubview(deleteUserAccount)
        
         player.play()
         
@@ -88,6 +91,49 @@ class ChooseViewController: UIViewController{
         }
         
         loopVideo(videoPlayer: self.player)        }
+    
+    
+    @IBAction func deleteUserAccount(_ sender: Any) {
+        
+        
+        let confirmController = UIAlertController(title: "Delete this account?", message: "Click Cancel if this was a mistake, you cannot undo this action", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let yes = UIAlertAction(title: "Delete Account", style: .default){_ in
+            
+            self.navigationController?.popViewController(animated: true)
+            
+            guard let user = Auth.auth().currentUser else {
+                        return
+            }
+
+            user.delete { error in
+              if let error = error {
+                // An error occurred while trying to delete the user
+                print("Error deleting user: \(error.localizedDescription)")
+              } else {
+                // User deleted successfully
+                  let successController = UIAlertController(title: "Success", message: "Account Successfully Deleted", preferredStyle: .alert)
+
+                  let okay = UIAlertAction(title: "Okay", style: . cancel)
+                  successController.addAction(okay)
+                print("User deleted successfully")
+                  self.present(successController, animated: true)
+              }
+            }
+        }
+        
+        confirmController.addAction(cancel)
+        confirmController.addAction(yes)
+        self.present(confirmController, animated: true)
+    
+        }
+        
+ 
+        
+       
+    
         
     }
 
