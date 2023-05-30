@@ -29,6 +29,7 @@ struct PlayerListing {
     var shuttleRun: String?
     var forty: String?
     var broadJump: String?
+    var longball: String?
     
     
     

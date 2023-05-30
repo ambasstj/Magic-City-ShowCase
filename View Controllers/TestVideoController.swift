@@ -67,7 +67,7 @@ class TestVideoController: UIViewController {
             if let destinationVC = segue.destination as? PlayerProfileController {
                 destinationVC.loadViewIfNeeded() // to make sure the view is loaded
                 destinationVC.addAthleteButton.isHidden = true
-                destinationVC.shouldHideButton = true
+                destinationVC.shouldHideButtons = true
             }
         } else {
             print("Why lord, why lord do I gotta suffer?")

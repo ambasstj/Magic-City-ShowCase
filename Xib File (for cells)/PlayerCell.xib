@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -106,6 +107,14 @@
                             <constraint firstItem="vNg-Go-aSF" firstAttribute="top" secondItem="rzX-jw-7Fv" secondAttribute="top" constant="9" id="pyh-as-0hx"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Je-ST-gkf" userLabel="Comment Button">
+                        <rect key="frame" x="24" y="25.5" width="52.5" height="34"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <imageReference key="image" image="ellipsis.bubble.fill" catalog="system" symbolScale="large"/>
+                            <color key="baseForegroundColor" red="0.20000001789999999" green="0.25098040700000002" blue="0.3058823645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </buttonConfiguration>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -113,7 +122,9 @@
                     <constraint firstItem="jez-Ou-oWL" firstAttribute="leading" secondItem="LBh-Hy-abA" secondAttribute="trailing" constant="5" id="2vN-dM-xsB"/>
                     <constraint firstItem="BG6-6g-Kyb" firstAttribute="leading" secondItem="jez-Ou-oWL" secondAttribute="trailing" id="8rf-lj-meH"/>
                     <constraint firstAttribute="trailing" secondItem="BG6-6g-Kyb" secondAttribute="trailing" id="CLe-ba-wbN"/>
+                    <constraint firstItem="LBh-Hy-abA" firstAttribute="top" secondItem="3Je-ST-gkf" secondAttribute="bottom" constant="10" id="DXG-15-WBK"/>
                     <constraint firstItem="rzX-jw-7Fv" firstAttribute="leading" secondItem="caq-Ea-Nwg" secondAttribute="leading" constant="22" id="IPm-wF-gqR"/>
+                    <constraint firstItem="LBh-Hy-abA" firstAttribute="centerX" secondItem="3Je-ST-gkf" secondAttribute="centerX" id="Kgq-iL-pnN"/>
                     <constraint firstAttribute="bottom" secondItem="jez-Ou-oWL" secondAttribute="bottom" constant="9" id="Vjy-DJ-sN2"/>
                     <constraint firstItem="jez-Ou-oWL" firstAttribute="leading" secondItem="rzX-jw-7Fv" secondAttribute="trailing" constant="1" id="bO7-bn-3U4"/>
                     <constraint firstItem="LBh-Hy-abA" firstAttribute="centerY" secondItem="caq-Ea-Nwg" secondAttribute="centerY" id="cg9-jr-O8o"/>
@@ -128,6 +139,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="addPhoto" destination="vNg-Go-aSF" id="bYb-kz-UAA"/>
+                <outlet property="commentButton" destination="3Je-ST-gkf" id="VHb-a7-m5u"/>
                 <outlet property="graduatingClass" destination="gtx-1P-QZ2" id="bgk-9m-7fg"/>
                 <outlet property="numberonChest" destination="LBh-Hy-abA" id="gLP-bZ-9iM"/>
                 <outlet property="playerSnapshot" destination="jez-Ou-oWL" id="Hq7-ev-hIO"/>
@@ -136,12 +148,13 @@
                 <outlet property="playerschool" destination="4sU-Fb-ntq" id="uvC-HS-hR4"/>
                 <outlet property="position" destination="38J-dT-kwQ" id="FhM-u2-MJC"/>
             </connections>
-            <point key="canvasLocation" x="392.09302325581393" y="63.412017167381975"/>
+            <point key="canvasLocation" x="391.9921875" y="63.030746705710101"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="MCS Logo no BG" width="166.5" height="166.5"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="ellipsis.bubble.fill" catalog="system" width="128" height="110"/>
         <namedColor name="ColorPalatte Black">
             <color red="0.10599999874830246" green="0.10199999809265137" blue="0.090000003576278687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

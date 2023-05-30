@@ -32,6 +32,7 @@ class PlayerViewController: UIViewController {
     var selectedIndexPath: IndexPath?
     var selectedIndice = [IndexPath]()
     var indexPH: IndexPath?
+    var rowPH2: Int?
     
     
     
@@ -51,10 +52,10 @@ class PlayerViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         
         let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(back(sender:)))
-                                    
+        
         self.navigationItem.leftBarButtonItem = newBackButton
-    
-
+        
+        
         
         loadPlayers()
         
@@ -87,10 +88,11 @@ class PlayerViewController: UIViewController {
                             
                             if let playerName = dataFields[K.FStore.name] as? String, let bibNumber = dataFields[K.FStore.bibNumber] as? Int {
                                 
-                             let documentID = docID
+                                let documentID = docID
                                 
                                 
                                 var newPlayer = PlayerListing(name: playerName, submissionId: bibNumber, documentID: documentID)
+                                
                                 newPlayer.position = dataFields[K.FStore.positions] as? String ?? "position"
                                 newPlayer.city = dataFields[K.FStore.city] as? String ?? "City"
                                 newPlayer.graduatingClass = dataFields[K.FStore.classOf] as? Int
@@ -107,9 +109,9 @@ class PlayerViewController: UIViewController {
                                     
                                     //This section is responsible for scrolling to a specified part of the table view.
                                     
-//                                    let indexPath = IndexPath(row: self.players.startIndex, section: 0)
-//
-//                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                                    //                                    let indexPath = IndexPath(row: self.players.startIndex, section: 0)
+                                    //
+                                    //                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                                     
                                 }
                                 
@@ -117,9 +119,9 @@ class PlayerViewController: UIViewController {
                                 
                                 print("How could this be true AAND the array is clearly being populated?")
                             }
-                        
+                            
                         }
-                       
+                        
                     }
                 }
             }
@@ -142,14 +144,14 @@ class PlayerViewController: UIViewController {
         confirmController.addAction(cancel)
         confirmController.addAction(yes)
         self.present(confirmController, animated: true)
-         // Perform your custom actions
-         // ...
-         // Go back to the previous ViewController
-   
-     }
+        // Perform your custom actions
+        // ...
+        // Go back to the previous ViewController
         
+    }
     
-
+    
+    
     
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
@@ -164,7 +166,7 @@ class PlayerViewController: UIViewController {
     
     
     
-
+    
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
@@ -176,8 +178,48 @@ class PlayerViewController: UIViewController {
             
         }
     }
+    
+    
+    @objc func addComment(_ sender: UIButton) {
+        
+        
+        let row = sender.tag
+        
+        rowPH2 = row
+        
+        let docID: String = self.players[rowPH2 ?? 0].documentID
+        
+        let alertController = UIAlertController(title: self.navigationItem.title, message: "Add Comment For This Player?", preferredStyle: .alert)
+        
+        alertController.addTextField { (textField) in
+            // configure the properties of the text field
+            textField.placeholder = "Begin Typing Here"
+            
+            alertController.view.backgroundColor = UIColor.systemGreen
+        }
+        
+        
+        // add the buttons/actions to the view controller
+        let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+        
+        
+        //MARK: - Committing results via "SAVE" BUTTON
+        
+        let saveAction = UIAlertAction(title: "SAVE", style: .default) { _ in
+            
+            let eventResults = alertController.textFields![0].text
+            
+            self.db.collection(K.FStore.collectionName).document(docID).setData([
+                "Coach Comment\(UUID())" : eventResults ?? ""], merge: true)
+            
+            
+        }
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        
+        self.present(alertController, animated: true, completion: nil)}
 }
-
    
 
 extension PlayerViewController: UITableViewDataSource {
@@ -194,6 +236,9 @@ extension PlayerViewController: UITableViewDataSource {
         let docID = self.players[indexPath.row].documentID
         let documentRef = collectionRef.document(docID)
         
+   
+        cell.commentButton.setTitle("", for: .normal)
+        cell.commentButton.tag = indexPath.row
         cell.addPhoto.isHidden = true
         cell.playername.text = players[indexPath.row].name
         cell.graduatingClass.text = "\(players[indexPath.row].graduatingClass ?? 0000)"
@@ -202,6 +247,7 @@ extension PlayerViewController: UITableViewDataSource {
         cell.playerlocation.text = "\(players[indexPath.row].city ?? "City"),\(players[indexPath.row].State ?? "State")"
         cell.numberonChest.text = String(players[indexPath.row].submissionId)
         cell.playerSnapshot.image = UIImage(named: "MCS Logo no BG")
+        cell.commentButton.addTarget(self, action: #selector(addComment), for: .touchUpInside)
       
         
         

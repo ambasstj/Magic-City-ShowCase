@@ -35,13 +35,14 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
     var selectedPhoto: UIImage!
     // a variable i'm using associate the "take photo" button with the cell it lives in, I'm using .tag to append a property "tag" with the value of (indexPath.row) in my CellForRowAt method
     var rowPH: Int?
+    var rowPH2: Int?
     
     //my array of player objects
     var players: [PlayerListing] = []
     //using this variable to pass the value of the selected index over to the playerprofileloded view controller so I can access the results of the selected player from the previous (this) screen
     var indexPH: IndexPath?
     
-    var shouldHideButton = false
+    var shouldHideButtons = false
 
     
     override func viewDidLoad() {
@@ -109,6 +110,7 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
                                 "N/A"
                                 newPlayer.weight = dataFields[K.FStore.weight] as? String ?? "N/A"
                                 newPlayer.shuttleRun = dataFields[K.FStore.shuttle] as? String ?? "N/A"
+                                newPlayer.longball = dataFields[K.FStore.longball] as? String ?? nil
                                 
                                 
                                 
@@ -218,6 +220,49 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
        
     }
     
+    @objc func addComment(_ sender: UIButton) {
+        
+        
+        let row = sender.tag
+        
+        rowPH2 = row
+        
+         let docID: String = self.players[rowPH2 ?? 0].documentID
+            
+            let alertController = UIAlertController(title: self.navigationItem.title, message: "Add Comment For This Player?", preferredStyle: .alert)
+            
+            alertController.addTextField { (textField) in
+                // configure the properties of the text field
+                textField.placeholder = "Begin Typing Here"
+                
+                alertController.view.backgroundColor = UIColor.systemGreen
+            }
+            
+            
+            // add the buttons/actions to the view controller
+            let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+            
+            
+            //MARK: - Committing results via "SAVE" BUTTON
+            
+            let saveAction = UIAlertAction(title: "SAVE", style: .default) { _ in
+                
+                let eventResults = alertController.textFields![0].text
+                
+                self.db.collection(K.FStore.collectionName).document(docID).setData([
+                    "Coach Comment\(UUID())" : eventResults ?? ""], merge: true)
+                
+                
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(saveAction)
+            
+            self.present(alertController, animated: true, completion: nil)}
+    
+
+    
+    
     //a delegate/protocol method? once again, not something i wholly understand, but this method is called automatically once the imagepicker has made a selection
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // assigns the original image of the selection to a variable and downcasts it as an UIImage
@@ -313,10 +358,25 @@ extension PlayerProfileController: UITableViewDataSource {
         //assigns the cell as the XIB File
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for:indexPath) as! PlayerCell
         
-        if shouldHideButton {
+        if let photographerCheck = Auth.auth().currentUser?.email{
+            
+            if photographerCheck.contains("clinton") == false && photographerCheck.contains("photographer") == false && photographerCheck.contains("jason") == false {
+                
+                cell.addPhoto.isHidden = true
+                
+            }
+            else{
+                cell.addPhoto.isHidden = false
+            }
+    
+        }
+        
+        if shouldHideButtons {
             cell.addPhoto.isHidden = true
+            cell.commentButton.isHidden = true
         }
         cell.addPhoto.setTitle("", for: .normal)
+        cell.commentButton.setTitle("", for: .normal)
         cell.playername.text = players[indexPath.row].name
         cell.graduatingClass.text = "\(players[indexPath.row].graduatingClass ?? 0000)"
         cell.position.text = players[indexPath.row].position ?? "Position"
@@ -324,9 +384,13 @@ extension PlayerProfileController: UITableViewDataSource {
         cell.playerlocation.text = "\(players[indexPath.row].city ?? "City"),\(players[indexPath.row].State ?? "State")"
         cell.numberonChest.text = String(players[indexPath.row].submissionId)
         cell.addPhoto.tag = indexPath.row
+        cell.commentButton.tag = indexPath.row
         // really cool and useful, I was able to assign the function of a button that exists inside another view controller (PlayerCell) by using @objc and #selecter to set the target of that button to a funciton in this VC
         cell.addPhoto.addTarget(self, action: #selector(takePhoto), for: .touchUpInside)
+        cell.commentButton.addTarget(self, action: #selector(addComment), for: .touchUpInside)
         // uses tableView.indexPathsForVisibleRows to pass the visible indexpaths into my assignURLToPlayersFromFirebaseStorage function
+        
+        
         
         if let imageUrl = players[indexPath.row].url {
             cell.playerSnapshot.sd_setImage(

@@ -25,6 +25,7 @@ class PlayerCell: UITableViewCell {
     
     @IBOutlet weak var numberonChest: UILabel!
     
+    @IBOutlet weak var commentButton: UIButton!
     
     @IBOutlet weak var playerSnapshot: UIImageView!
     

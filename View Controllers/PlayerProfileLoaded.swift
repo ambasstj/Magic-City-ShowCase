@@ -18,6 +18,7 @@ class PlayerProfileLoaded: UIViewController{
     
     @IBOutlet weak var heightLabel: UILabel!
     
+    @IBOutlet weak var LongballResult: UILabel!
     
     @IBOutlet weak var positionLabel: UILabel!
     
@@ -29,6 +30,7 @@ class PlayerProfileLoaded: UIViewController{
     
     
     
+    @IBOutlet weak var QBLongtossView: UIView!
     
     @IBOutlet weak var schoolLabel: UILabel!
     
@@ -75,6 +77,14 @@ class PlayerProfileLoaded: UIViewController{
         verticalLabel.text = playerArray?[indexPath ?? 0].Vertical
         fortyLabel.text = playerArray?[indexPath ?? 0].forty
         positionLabel.text = playerArray?[indexPath ?? 0].position
+        LongballResult.text = playerArray?[indexPath ?? 0].longball
+        
+        if playerArray?[indexPath ?? 0].longball == nil{
+            
+            QBLongtossView.isHidden = true
+            
+        }
+        
     
             
             }

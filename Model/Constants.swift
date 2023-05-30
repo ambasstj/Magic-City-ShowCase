@@ -47,6 +47,7 @@ struct K {
         static let city = "city"
         static let state = "state"
         static let wingSpan = "WingSpan"
+        static let longball = "QB Longball Toss"
         
         
     }
