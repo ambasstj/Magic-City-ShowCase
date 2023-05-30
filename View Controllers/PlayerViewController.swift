@@ -182,6 +182,23 @@ class PlayerViewController: UIViewController {
     
     @objc func addComment(_ sender: UIButton) {
         
+        if Auth.auth().currentUser?.email?.contains("clint") == false && Auth.auth().currentUser?.email?.contains("coach") == false && Auth.auth().currentUser?.email?.contains("jason") == false {
+            
+            let rejectController = UIAlertController(title: "INVALID OPERATION", message: "You do not have the proper credentials to complete this request", preferredStyle: .alert)
+            
+                rejectController.view.backgroundColor = UIColor.systemRed
+                rejectController.view.tintColor = UIColor.black
+                
+            
+            
+            let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            
+           
+            rejectController.addAction(newCancelAction)
+            self.present(rejectController, animated: true)
+            
+        }
         
         let row = sender.tag
         
@@ -207,10 +224,10 @@ class PlayerViewController: UIViewController {
         
         let saveAction = UIAlertAction(title: "SAVE", style: .default) { _ in
             
-            let eventResults = alertController.textFields![0].text
+            let coachComment = alertController.textFields![0].text
             
             self.db.collection(K.FStore.collectionName).document(docID).setData([
-                "Coach Comment\(UUID())" : eventResults ?? ""], merge: true)
+                "Coach Comment\(UUID()),\(self.navigationItem.title ?? "")" : coachComment ?? ""], merge: true)
             
             
         }
@@ -277,103 +294,122 @@ extension PlayerViewController: UITableViewDelegate, UITextFieldDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let docID = self.players[indexPath.row].documentID
-        let collectionRef = self.db.collection(K.FStore.collectionName)
-        let documentRef = collectionRef.document(docID)
-        
-        documentRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                
-                // If the value of the key in document.get(Key) is not empty, then execute the following code
-                
-                if let existingData: String = document.get(self.navigationItem.title ?? "") as? String, !existingData.isEmpty {
+        if Auth.auth().currentUser?.email?.contains("coach") == true || Auth.auth().currentUser?.email?.contains("clint") == true || Auth.auth().currentUser?.email?.contains("jason") == true {
+            
+            let docID = self.players[indexPath.row].documentID
+            let collectionRef = self.db.collection(K.FStore.collectionName)
+            let documentRef = collectionRef.document(docID)
+            
+            documentRef.getDocument { (document, error) in
+                if let document = document, document.exists {
                     
-                    let confirmController = UIAlertController(title: "EDIT RESULTS?", message: "OVERWRITE PLAYER RESULTS?", preferredStyle: .alert)
+                    // If the value of the key in document.get(Key) is not empty, then execute the following code
                     
-                    confirmController.addTextField { (textField) in
-                        textField.placeholder = "This will overwrite previous results"
-                        confirmController.view.backgroundColor = UIColor.systemYellow
-                        confirmController.view.tintColor = UIColor.black
+                    if let existingData: String = document.get(self.navigationItem.title ?? "") as? String, !existingData.isEmpty {
+                        
+                        let confirmController = UIAlertController(title: "EDIT RESULTS?", message: "OVERWRITE PLAYER RESULTS?", preferredStyle: .alert)
+                        
+                        confirmController.addTextField { (textField) in
+                            textField.placeholder = "This will overwrite previous results"
+                            confirmController.view.backgroundColor = UIColor.systemYellow
+                            confirmController.view.tintColor = UIColor.black
+                            
+                        }
+                        
+                        let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                        
+                        let newSaveAction = UIAlertAction(title: "Save", style: .default) { _ in
+                            
+                            let newEventResults = confirmController.textFields![0].text
+                            
+                            self.db.collection(K.FStore.collectionName).document(docID).setData([
+                                self.navigationItem.title ?? "" : newEventResults ?? ""], merge: true)
+                            
+                            
+                        }
+                        
+                        confirmController.addAction(newSaveAction)
+                        confirmController.addAction(newCancelAction)
+                        self.present(confirmController, animated: true)
                         
                     }
                     
-                    let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                    
-                    let newSaveAction = UIAlertAction(title: "Save", style: .default) { _ in
+                    else {
                         
-                        let newEventResults = confirmController.textFields![0].text
+                        let alertController = UIAlertController(title: self.navigationItem.title, message: "SUBMIT RESULTS", preferredStyle: .alert)
                         
-                        self.db.collection(K.FStore.collectionName).document(docID).setData([
-                            self.navigationItem.title ?? "" : newEventResults ?? ""], merge: true)
+                        alertController.addTextField { (textField) in
+                            // configure the properties of the text field
+                            textField.placeholder = "\(self.navigationItem.title ?? "Event") results"
+                            
+                            alertController.view.backgroundColor = UIColor.systemBlue
+                        }
                         
                         
-                    }
-                    
-                    confirmController.addAction(newSaveAction)
-                    confirmController.addAction(newCancelAction)
-                    self.present(confirmController, animated: true)
-                    
-                }
+                        // add the buttons/actions to the view controller
+                        let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
+                        
+                        
+                        //MARK: - Committing results via "SAVE" BUTTON
+                        
+                        let saveAction = UIAlertAction(title: "SAVE", style: .default) { _ in
+                            
+                            let eventResults = alertController.textFields![0].text
+                            
+                            self.db.collection(K.FStore.collectionName).document(docID).setData([
+                                self.navigationItem.title ?? "" : eventResults ?? ""], merge: true)
+                            
+                            
+                        }
+                        
+                        alertController.addAction(cancelAction)
+                        alertController.addAction(saveAction)
+                        
+                        self.present(alertController, animated: true, completion: nil)}}
+                
                 
                 else {
-                    
-                    let alertController = UIAlertController(title: self.navigationItem.title, message: "SUBMIT RESULTS", preferredStyle: .alert)
-                    
-                    alertController.addTextField { (textField) in
-                        // configure the properties of the text field
-                        textField.placeholder = "\(self.navigationItem.title ?? "Event") results"
-                        
-                        alertController.view.backgroundColor = UIColor.systemBlue
-                    }
-                    
-                    
-                    // add the buttons/actions to the view controller
-                    let cancelAction = UIAlertAction(title: "CANCEL", style: .cancel, handler: nil)
-                    
-                    
-                    //MARK: - Committing results via "SAVE" BUTTON
-                    
-                    let saveAction = UIAlertAction(title: "SAVE", style: .default) { _ in
-                        
-                        let eventResults = alertController.textFields![0].text
-                        
-                        self.db.collection(K.FStore.collectionName).document(docID).setData([
-                            self.navigationItem.title ?? "" : eventResults ?? ""], merge: true)
-                        
-                        
-                    }
-                    
-                    alertController.addAction(cancelAction)
-                    alertController.addAction(saveAction)
-                    
-                    self.present(alertController, animated: true, completion: nil)}}
+                    print("Document does not exist")
+                }}
             
             
-            else {
-                print("Document does not exist")
-            }}
-        
-        
-        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        
-        if let playerSearch = searchBar.text{
-            
-            if Int(playerSearch) ?? 0 > 0 && Int(playerSearch) ?? 0 <= players.count{
-                
-                self.tableView.scrollToRow(at: IndexPath(row: (Int(playerSearch) ?? 1) - 1, section: 0), at: .top, animated: true)
-                
-                searchBar.endEditing(true)}
+            self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
             
         }
-        return true
+        else {
+            let rejectController = UIAlertController(title: "INVALID OPERATION", message: "You do not have the proper credentials to complete this request", preferredStyle: .alert)
+            
+                rejectController.view.backgroundColor = UIColor.systemRed
+                rejectController.view.tintColor = UIColor.black
+                
+            
+            
+            let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            
+           
+            rejectController.addAction(newCancelAction)
+            self.present(rejectController, animated: true)
+            
+        }
+        }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            
+            
+            if let playerSearch = searchBar.text{
+                
+                if Int(playerSearch) ?? 0 > 0 && Int(playerSearch) ?? 0 <= players.count{
+                    
+                    self.tableView.scrollToRow(at: IndexPath(row: (Int(playerSearch) ?? 1) - 1, section: 0), at: .top, animated: true)
+                    
+                    searchBar.endEditing(true)}
+                
+            }
+            return true
+        }
     }
-    }
-    
+
     
     
     

@@ -201,26 +201,64 @@ class PlayerProfileController: UIViewController, UIImagePickerControllerDelegate
     }
     
     @objc func takePhoto(_ sender: UIButton) {
-        // creates a variable that references the tag we appended to "takePhoto" in cellForRowAt
-        let row = sender.tag
-        //changes the value of the global variable to the tag
-        rowPH = row
-        //checks to see if the camera is available
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            //initializes the imagepicker
-            imagePicker = UIImagePickerController()
-            //sets the delegate for the picker to itself?? didn't know this was a thing. TY Stackoverflow
-            imagePicker?.delegate = self
-            //sets the sourcetype for the imagePicker
-            imagePicker?.sourceType = .camera
-            //presents the camera
-            present(imagePicker!, animated: true, completion: nil)
+        
+        if Auth.auth().currentUser?.email?.contains("photographer") == false {
+            
+            let rejectController = UIAlertController(title: "INVALID OPERATION", message: "You do not have the proper credentials to complete this request", preferredStyle: .alert)
+            
+            rejectController.view.backgroundColor = UIColor.systemRed
+            rejectController.view.tintColor = UIColor.black
+            
+            
+            
+            let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            
+            
+            rejectController.addAction(newCancelAction)
+            self.present(rejectController, animated: true)
             
         }
-       
-    }
+        
+        else{
+            // creates a variable that references the tag we appended to "takePhoto" in cellForRowAt
+            let row = sender.tag
+            //changes the value of the global variable to the tag
+            rowPH = row
+            //checks to see if the camera is available
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                //initializes the imagepicker
+                imagePicker = UIImagePickerController()
+                //sets the delegate for the picker to itself?? didn't know this was a thing. TY Stackoverflow
+                imagePicker?.delegate = self
+                //sets the sourcetype for the imagePicker
+                imagePicker?.sourceType = .camera
+                //presents the camera
+                present(imagePicker!, animated: true, completion: nil)
+                
+            }
+            
+        }}
     
     @objc func addComment(_ sender: UIButton) {
+        
+        if Auth.auth().currentUser?.email?.contains("clint") == false && Auth.auth().currentUser?.email?.contains("coach") == false && Auth.auth().currentUser?.email?.contains("jason") == false {
+            
+            let rejectController = UIAlertController(title: "INVALID OPERATION", message: "You do not have the proper credentials to complete this request", preferredStyle: .alert)
+            
+                rejectController.view.backgroundColor = UIColor.systemRed
+                rejectController.view.tintColor = UIColor.black
+                
+            
+            
+            let newCancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            
+           
+            rejectController.addAction(newCancelAction)
+            self.present(rejectController, animated: true)
+            
+        }
         
         
         let row = sender.tag
